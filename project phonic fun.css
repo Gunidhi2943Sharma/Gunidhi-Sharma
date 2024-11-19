@@ -1,0 +1,158 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background: url('https://files.oaiusercontent.com/file-IPFMtIB4GIDSIXEE9oooORWP?se=2024-11-17T13%3A08%3A55Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd2690b51-4542-4d37-9026-7157737a7e44.webp&sig=AMVPjINY6RdGf0kvEe5KDMpRDkZqU28utgeCXOl9cU0%3D') 
+                no-repeat center center fixed, 
+                linear-gradient(135deg, #bdc9f0 0%, #bdc9f0 100%);
+    margin: 0;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #110101;
+}
+
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: hsl(263, 44%, 25%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    border: 3px solid #d5dad5;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 3.5em;
+    color: #000303;
+    text-shadow: 0 0 6px #253e63, 0 0 15px #183e74;
+    margin-bottom: 20px;
+    font-weight: bold;  /* Makes the heading bold */
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+header p {
+    font-size: 2.5em;
+    color: #b1bd85;
+}
+
+/* Pulse Animation for Header */
+@keyframes pulse {
+    from {
+        text-shadow: 0 0 5px #29357a, 0 0 12px #cdbae7;
+    }
+    to {
+        text-shadow: 0 0 10px #cbddcc, 0 0 20px #AED581;
+    }
+}
+
+/* Light Colored Buttons */
+nav button {
+    background-color: #e0dbf5;
+    color: #9e9393;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(67, 144, 206, 0.4);
+}
+
+nav button:hover {
+    background-color: #a6d7ee;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #5590c0;
+}
+
+/* Animated Sections with Soft Colors */
+.section {
+    background-color: #99a4d8;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.4s ease;
+    box-shadow: 0px 4px 10px rgba(51, 50, 50, 0.1);
+    animation: popIn 1s ease forwards;
+    opacity: 0;
+}
+
+.section:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.section:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pop-In Animation for Sections */
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Footer with Subtle Glow */
+footer {
+    background-color: #1c1f1e;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    color: #d3cece;
+    text-shadow: 0 0 5px #EF9A9A;
+}
+
+/* Image Animations */
+.section img {
+    width: 300px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    animation: float 2s ease-in-out infinite;
+}
+
+.section img:hover {
+    transform: scale(2.2) rotate(12deg);
+    opacity: 0.9;
+}
+
+/* Floating Animation for Images */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Footer Star Animation */
+.stars {
+    font-size: 1.5em;
+    color: #fad65f;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Fade-In Animation for Container */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
